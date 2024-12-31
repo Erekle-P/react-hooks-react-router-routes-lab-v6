@@ -25,7 +25,6 @@ const routes = [
     element: <Movie />,
     errorElement: <ErrorPage />,
   },
-  // Add a wildcard route for unknown paths
   {
     path: "*",
     element: <ErrorPage />,

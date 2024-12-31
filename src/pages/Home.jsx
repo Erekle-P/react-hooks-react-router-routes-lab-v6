@@ -21,15 +21,16 @@ function Home() {
   return (
     <>
       <header>
-        <NavBar />
+        <NavBar className="navbar" />
       </header>
       <main>
         <h1>Home Page</h1>
-        {error ? (
-          <p>{error}</p>
-        ) : (
-          movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)
-        )}
+        {error && <p>Error: {error}</p>}
+        <div>
+          {movies.map((movie) => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))}
+        </div>
       </main>
     </>
   );
